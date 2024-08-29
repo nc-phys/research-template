@@ -1,0 +1,21 @@
+\documentclass[10pt,twocolumn]{article}
+
+\input{documents/snippets/preamble.tex}
+
+\addbibresource{references/ref.bib}
+
+\input{metadata.tex}
+
+\begin{document}
+
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+    \input{abstract.tex}
+    \vspace*{25pt}
+  \end{@twocolumnfalse}
+]
+\input{share.tex}
+\printbibliography{}
+
+\end{document}
