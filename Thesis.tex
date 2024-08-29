@@ -1,0 +1,39 @@
+\documentclass[12pt,twoside]{book}
+
+\input{documents/snippets/preamble.tex}
+
+\addbibresource{references/ref.bib}
+
+\input{metadata.tex}
+\purpose{
+  Purpose of Thesis
+}
+
+\begin{document}
+
+% Front Matter
+\input{documents/00-titlePage.tex}
+\thispagestyle{empty}
+\frontmatter
+\setcounter{page}{1}
+\newpage\vspace*{75pt}
+\fmsection{
+  \input{documents/01-declaration.tex}
+}
+\newpage\vspace*{75pt}
+\fmsection{
+  \input{abstract.tex}
+}
+\tableofcontents
+\clearpage
+
+% Main Matter
+\mainmatter
+\input{share.tex}
+\clearpage
+
+% Back Matter
+\pagenumbering{Roman}\setcounter{page}{1}
+\printbibliography[heading=bibintoc]{}
+
+\end{document}
