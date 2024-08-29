@@ -1,0 +1,27 @@
+\documentclass[12pt]{report}
+
+\input{documents/snippets/preamble.tex}
+
+\addbibresource{references/ref.bib}
+
+\input{metadata.tex}
+
+\begin{document}
+
+% Main Matter
+\makeatletter
+\chapter{\@title}
+\makeatother
+\fmsection{
+  \input{abstract.tex}
+  \vspace*{25pt}
+}
+
+\input{share.tex}
+\clearpage
+
+% Back Matter
+\pagenumbering{Roman}\setcounter{page}{1}
+\printbibliography[heading=bibintoc]{}
+
+\end{document}
